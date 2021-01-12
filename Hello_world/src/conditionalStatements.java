@@ -16,6 +16,9 @@ public class conditionalStatements {
         if(a>b){
             System.out.println("a is greater");
         }
+        else if(a==b){
+            System.out.println("both the numbers are equal");
+        }
         else{
             System.out.println("b is greater");
         }
