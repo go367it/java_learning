@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class AddTwoNum {
 
-    public static int _addTwoNum(int n1, int n2){
+    public static int addTwoNum(int n1, int n2){
 
         return n1 + n2;
 
@@ -16,7 +16,7 @@ public class AddTwoNum {
         int n1 = s.nextInt();
         int n2 = s.nextInt();
 
-        System.out.println("Output: "+_addTwoNum(n1, n2));
+        System.out.println("Output: " + addTwoNum(n1, n2));
 
     }
 }
