@@ -1,33 +1,30 @@
 import java.util.Scanner;
 
 public class Ncr {
+
+    // function to calculate the factorial of the given number
+    public static int factorial(int num){
+        int fact = 1;
+        for(int i = 1; i<=num;i++){
+            fact = fact * i;
+        }
+        return fact;
+    }
+
     public static void main(String[] args){
         Scanner s = new Scanner(System.in);
         
         int n = s.nextInt();
         int r = s.nextInt();
 
-        int factN = 1;
+        int factN = factorial(n);
 
-        // loop for doing n factorial
-        for(int i = 1; i<=n;i++){
-            factN = factN * i;
-        }
-
-        // loop for doing r factorial
-        int factR = 1;
-        for(int i = 1;i<=r;i++){
-            factR = factR * i;
-        }
+        int factR = factorial(r);
 
         //loop for doing the n-r factorial
-        int factN_R = n-r;
-        int N_r = 1;
-        for(int i =1;i<=factN_R;i++){
-            N_r = N_r * i;
-        }
+        int factN_R = factorial(n-r);
 
-        int result = factN / (factR*N_r);
+        int result = factN / (factR*factN_R);
 
         System.out.println("Result is: "+ result);
 
